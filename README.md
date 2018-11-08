@@ -4,14 +4,16 @@ Node Setup
 ### Write
 
 ```shell
-gpg --encrypt --armor --recipient guyifan1121@gmail.com run.sh
+tar czf content.tar.gz content
+gpg --encrypt --armor --recipient guyifan1121@gmail.com content.tar.gz
 
 ```
 
 ### Read
 
 ```shell
-gpg --decrypt run.sh.asc > run.sh
+gpg --decrypt content.tar.gz.asc > content.tar.gz
+tar zxvf content.tar.gz
 ```
 
 > Freedom is not free.
