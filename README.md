@@ -1,19 +1,19 @@
 Node Setup
 ==============
 
-### Write
+### Decrypt
 
 ```shell
-tar czf content.tar.gz content
-gpg --encrypt --armor --recipient guyifan1121@gmail.com content.tar.gz
+git-crypt unlock
+tar zxvf content.tar.gz
 
 ```
 
-### Read
+### Encrypt
 
 ```shell
-gpg --decrypt content.tar.gz.asc > content.tar.gz
-tar zxvf content.tar.gz
+tar czvf content.tar.gz content
+gpg-crypt lock -a
 ```
 
 > Freedom is not free.
